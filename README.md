@@ -9,6 +9,14 @@
 print("Hello Bob")
 cat("Hello", "Bob", "\n")
 
+# You can show all variables in the current session with 
+ls()
+print(ls(pattern="b"))		# Search with a pattern
+print(ls(all.name = TRUE))	# Variables that starts with dot (.) are invisible. Use this to show them
+
+# Remove variable a
+rm(a)
+
 # In R, the most simple type of variable are vector
 v <- TRUE
 
@@ -63,7 +71,16 @@ df <- data.frame(
 # 2 20 carl     456
 # 3 30  ben      20
 
-
+# Operations on vectors
+v <- c( 2,5.5,6)
+t <- c(8, 3, 4)
+res = (v+t)		# Add the 2 vectors
+res = (v-t)		# Substract the 2 vectors
+res = (v*t)		# Multiply the 2 vectors	
+res = (v/t)		# Divide the two vectors
+res = (v%%t)		# Remainder
+res = (v%/%t)		# Integer division
+res = (v^t)		# Exponent
 ```
 
 ## Arrays
