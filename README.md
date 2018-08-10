@@ -16,10 +16,10 @@ print(ls(all.name = TRUE))  # Variables that starts with dot (.) are invisible. 
 
 # Remove variable a
 rm(a)
+```
 
-# In R, the most simple type of variable are vector
-v <- TRUE
-
+## Variables
+```r
 # We can put dot in a variable name
 var.1 = 1
 
@@ -30,28 +30,44 @@ v <<- 1
 1 -> v
 1 ->> v
 
-
-# You can show the type of variable
-print(class(v))
-
-
+# Variable types
 v <- TRUE     # Booleans
 v <- FALSE
 v <- 4.23     # Numeric
 v <- 2L       # Integer (Add "L")
 v <- "hey"    Character
 
-# Vector with more than one elements of the same type
+# You can show the type of variable
+print(class(v))
+```
+
+## Vector
+```r
+
+# In R, the most simple type of variable are vector (same as "variable")
+v <- TRUE
+
+# All element should be same type
 v <- c('bob', 'carl', 'ben')
 
-# Quick assign of a vector
-v = 1:10    # same as c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+v = 1:10                                # Quick assign of a vector. Same as c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+seq(5, 9, by = 0.4)                     # Using a sequence
+"bob" %in% c("bob", "carl")             # Check if an element is in a vector
+c("bob", "carl")[1]                     # Access elements by index (starts at 1). Return "bob"
+sort(c(2, 3, 1))                        # Sorting a vector ascending
+sort(c(2, 3, 1), decreasing = TRUE)     # Sorting a vector descending
+```
 
-# Chekc if an element is in a vector
+## List
+```r
 
-
-# A List is a collection that can contains different kind of data (and functions)
+# A List is a collection that can contain different kind of data (and functions)
 v <- list(c("bob", "carl"), 23L, 23.4, sin)
+
+v = list(id=1, name="bob")      # Naming list elements
+v$name                          # Get one element by name
+
+
 
 # A matrix is a 2D only collection
 m <- matrix(c("bob", 200, 1343, "carl", 201, 823), nrow=2, ncol=3, byrow=TRUE)
@@ -216,5 +232,8 @@ paste("hello", "bob", sep=",")              # Concatenate using separator
 format(12.4534596, digits=4)                # Format int. Res: "12.45"
 format("bob", width=15)                     # Pad the string with spaces for 15 chars total.
 format("bob", width=15, justify="right")    # Pad the string with spaces for 15 chars total and align to the right
-
+nchar("bob")                                # Nb of characters. 3 here.
+toupper("BoB")                              # Uppercase
+tolower("BoB")                              # Lowercase
+substring("bob", 2, 3)                      # Substring for 2nd char to 3rd char. NOTE start à 1 and NOT 0.
 ```
