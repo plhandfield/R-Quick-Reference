@@ -27,17 +27,29 @@ v <- list(c("bob", "carl"), 23L, 23.4, sin)
 # A matrix is a 2D only collection
 m <- matrix(c("bob", 200, 1343, "carl", 201, 823), nrow=2, ncol=3, byrow=TRUE)
 
-# Returns
 #      [,1]   [,2]  [,3]  
 # [1,] "bob"  "200" "1343"
 # [2,] "carl" "201" "823"
 
-# Factors stores a vector with unique values. It is case sensitive
+# Factors stores a vector with unique values. It is case sensitive.
+# They are most used in categorical variables.
 f <- factor(c("bob", "BOB", "carl", "carl"))
 
-# Returns
 # [1] bob  BOB  carl carl
 # Levels: bob BOB carl
+
+# Data Frames is like a matrix, but each colums can have a data type.
+df <- data.frame(
+		id = c(10, 20, 30),
+		name = c("bob", "carl", "ben"),
+		balance = c(2000, 456, 20)
+	)
+
+#   id name balance
+# 1 10  bob    2000
+# 2 20 carl     456
+# 3 30  ben      20
+
 
 ```
 
