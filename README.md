@@ -11,8 +11,8 @@ cat("Hello", "Bob", "\n")
 
 # You can show all variables in the current session with 
 ls()
-print(ls(pattern="b"))		# Search with a pattern
-print(ls(all.name = TRUE))	# Variables that starts with dot (.) are invisible. Use this to show them
+print(ls(pattern="b"))      # Search with a pattern
+print(ls(all.name = TRUE))  # Variables that starts with dot (.) are invisible. Use this to show them
 
 # Remove variable a
 rm(a)
@@ -45,7 +45,7 @@ v <- "hey"    Character
 v <- c('bob', 'carl', 'ben')
 
 # Quick assign of a vector
-v = 1:10	# same as c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+v = 1:10    # same as c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
 # Chekc if an element is in a vector
 
@@ -69,10 +69,10 @@ f <- factor(c("bob", "BOB", "carl", "carl"))
 
 # Data Frames is like a matrix, but each colums can have a data type.
 df <- data.frame(
-		id = c(10, 20, 30),
-		name = c("bob", "carl", "ben"),
-		balance = c(2000, 456, 20)
-	)
+        id = c(10, 20, 30),
+        name = c("bob", "carl", "ben"),
+        balance = c(2000, 456, 20)
+    )
 
 #   id name balance
 # 1 10  bob    2000
@@ -82,28 +82,28 @@ df <- data.frame(
 # Operations on vectors
 v <- c( 2,5.5,6)
 t <- c(8, 3, 4)
-res = (v+t)		# Add the 2 vectors
-res = (v-t)		# Substract the 2 vectors
-res = (v*t)		# Multiply the 2 vectors	
-res = (v/t)		# Divide the two vectors
-res = (v%%t)		# Remainder
-res = (v%/%t)		# Integer division
-res = (v^t)		# Exponent
+res = (v+t)     # Add the 2 vectors
+res = (v-t)     # Substract the 2 vectors
+res = (v*t)     # Multiply the 2 vectors
+res = (v/t)     # Divide the two vectors
+res = (v%%t)    # Remainder
+res = (v%/%t)   # Integer division
+res = (v^t)     # Exponent
 
 # Comparaisons (<, >, <=, >=, ==, !=)
 c1 = c(1, 2, 3)
 c2 = c(1, 2, 5)
-c1 == c2		# TRUE TRUE FALSE
+c1 == c2        # TRUE TRUE FALSE
 
 # Logical Operator (&, |, !) checks each elements.
 c1 = c(2, TRUE, 0)
 c2 = c(2, FALSE, 0)
-c1 & c2			# TRUE FALSE FALSE
+c1 & c2         # TRUE FALSE FALSE
 
 # Logical Operator for the first element only (&&, ||)
 c1 = c(FALSE, 2)
 c2 = c(TRUE, 4)
-c1 && c2		# FALSE
+c1 && c2        # FALSE
 
 
 
