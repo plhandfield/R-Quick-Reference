@@ -146,3 +146,48 @@ c1 && c2        # FALSE
 #   3 is (ein, zwei, drei)
 #   2 is (un, deux), the two "table"
 ```
+## Conditional
+```r
+score = 90
+if(score > 90)
+{
+    print("Perfect")
+}else if(score > 60)
+{
+    print("Good")
+
+}else 
+{
+    print("bad")
+}
+```
+
+## While
+```r
+i = 0
+while(i < 3) {
+    print(i)
+    i = i + 1
+}
+```
+
+## For
+```r
+v <- LETTERS[1:4]
+for ( i in v) {
+   print(i)
+}
+```
+
+## Loop
+```r
+i = 0
+repeat {   
+    if(i > 3){
+        break
+    }
+    print(i)
+
+    i = i + 1
+}
+```
