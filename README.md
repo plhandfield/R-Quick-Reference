@@ -191,3 +191,30 @@ repeat {
     i = i + 1
 }
 ```
+
+## Function
+```r
+# The last line is the function return value
+add2 <- function(a) {
+   a + 2
+}
+
+add2(10)    # Call the function
+
+# Default parameters
+add2 <- function(a = 10) {
+   a + 2
+}
+```
+
+## String
+```r
+a = "bob"                                   # Using double quotes
+a = 'bob'                                   # Using single quotes
+paste("hello", "bob")                       # Concatenate string
+paste("hello", "bob", sep=",")              # Concatenate using separator
+format(12.4534596, digits=4)                # Format int. Res: "12.45"
+format("bob", width=15)                     # Pad the string with spaces for 15 chars total.
+format("bob", width=15, justify="right")    # Pad the string with spaces for 15 chars total and align to the right
+
+```
