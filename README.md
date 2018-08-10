@@ -44,6 +44,12 @@ v <- "hey"    Character
 # Vector with more than one elements of the same type
 v <- c('bob', 'carl', 'ben')
 
+# Quick assign of a vector
+v = 1:10	# same as c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+# Chekc if an element is in a vector
+
+
 # A List is a collection that can contains different kind of data (and functions)
 v <- list(c("bob", "carl"), 23L, 23.4, sin)
 
