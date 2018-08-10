@@ -26,7 +26,9 @@ var.1 = 1
 # We can assigne variable in different ways
 v = 1
 v <- 1
+v <<- 1
 1 -> v
+1 ->> v
 
 
 # You can show the type of variable
@@ -81,6 +83,24 @@ res = (v/t)		# Divide the two vectors
 res = (v%%t)		# Remainder
 res = (v%/%t)		# Integer division
 res = (v^t)		# Exponent
+
+# Comparaisons (<, >, <=, >=, ==, !=)
+c1 = c(1, 2, 3)
+c2 = c(1, 2, 5)
+c1 == c2		# TRUE TRUE FALSE
+
+# Logical Operator (&, |, !) checks each elements.
+c1 = c(2, TRUE, 0)
+c2 = c(2, FALSE, 0)
+c1 & c2			# TRUE FALSE FALSE
+
+# Logical Operator for the first element only (&&, ||)
+c1 = c(FALSE, 2)
+c2 = c(TRUE, 4)
+c1 && c2		# FALSE
+
+
+
 ```
 
 ## Arrays
