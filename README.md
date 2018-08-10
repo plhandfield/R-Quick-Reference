@@ -50,51 +50,6 @@ v <- TRUE
 # All element should be same type
 v <- c('bob', 'carl', 'ben')
 
-v = 1:10                                # Quick assign of a vector. Same as c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-seq(5, 9, by = 0.4)                     # Using a sequence
-"bob" %in% c("bob", "carl")             # Check if an element is in a vector
-c("bob", "carl")[1]                     # Access elements by index (starts at 1). Return "bob"
-sort(c(2, 3, 1))                        # Sorting a vector ascending
-sort(c(2, 3, 1), decreasing = TRUE)     # Sorting a vector descending
-```
-
-## List
-```r
-
-# A List is a collection that can contain different kind of data (and functions)
-v <- list(c("bob", "carl"), 23L, 23.4, sin)
-
-v = list(id=1, name="bob")      # Naming list elements
-v$name                          # Get one element by name
-
-
-
-# A matrix is a 2D only collection
-m <- matrix(c("bob", 200, 1343, "carl", 201, 823), nrow=2, ncol=3, byrow=TRUE)
-
-#      [,1]   [,2]  [,3]  
-# [1,] "bob"  "200" "1343"
-# [2,] "carl" "201" "823"
-
-# Factors stores a vector with unique values. It is case sensitive.
-# They are most used in categorical variables.
-f <- factor(c("bob", "BOB", "carl", "carl"))
-
-# [1] bob  BOB  carl carl
-# Levels: bob BOB carl
-
-# Data Frames is like a matrix, but each colums can have a data type.
-df <- data.frame(
-        id = c(10, 20, 30),
-        name = c("bob", "carl", "ben"),
-        balance = c(2000, 456, 20)
-    )
-
-#   id name balance
-# 1 10  bob    2000
-# 2 20 carl     456
-# 3 30  ben      20
-
 # Operations on vectors
 v <- c( 2,5.5,6)
 t <- c(8, 3, 4)
@@ -120,6 +75,63 @@ c1 & c2         # TRUE FALSE FALSE
 c1 = c(FALSE, 2)
 c2 = c(TRUE, 4)
 c1 && c2        # FALSE
+
+# Other operations
+v = 1:10                                # Quick assign of a vector. Same as c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+seq(5, 9, by = 0.4)                     # Using a sequence
+"bob" %in% c("bob", "carl")             # Check if an element is in a vector
+c("bob", "carl")[1]                     # Access elements by index (starts at 1). Return "bob"
+sort(c(2, 3, 1))                        # Sorting a vector ascending
+sort(c(2, 3, 1), decreasing = TRUE)     # Sorting a vector descending
+```
+
+## List
+```r
+
+# A List is a collection that can contain different kind of data (and functions)
+v <- list(c("bob", "carl"), 23L, 23.4, sin)
+
+v = list(id=1, name="bob")      # Naming list elements
+v$name                          # Get one element by name
+v[3] = 100                      # Add an unamed element at the end
+```
+
+## Matrix
+```r
+
+# A matrix is a 2D only collection. All data should be of the same type (or they will all be caster to a base type (likely string))
+m <- matrix(c("bob", 200, 1343, "carl", 201, 823), nrow=2, ncol=3, byrow=TRUE)
+
+#      [,1]   [,2]  [,3]  
+# [1,] "bob"  "200" "1343"
+# [2,] "carl" "201" "823"
+```
+
+# Factor
+```r
+# Factors stores a vector with unique values. It is case sensitive.
+# They are most used in categorical variables.
+f <- factor(c("bob", "BOB", "carl", "carl"))
+
+# [1] bob  BOB  carl carl
+# Levels: bob BOB carl
+```
+
+# Data Frames
+```r
+# Data Frames is like a matrix, but each colums can have a data type.
+df <- data.frame(
+        id = c(10, 20, 30),
+        name = c("bob", "carl", "ben"),
+        balance = c(2000, 456, 20)
+    )
+
+#   id name balance
+# 1 10  bob    2000
+# 2 20 carl     456
+# 3 30  ben      20
+
+
 
 
 
