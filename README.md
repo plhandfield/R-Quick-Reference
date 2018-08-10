@@ -5,8 +5,21 @@
 
 # ctrl + l to clear the console. Same as cat("\014")
 
+# You can print in the console with
+print("Hello Bob")
+cat("Hello", "Bob", "\n")
+
 # In R, the most simple type of variable are vector
 v <- TRUE
+
+# We can put dot in a variable name
+var.1 = 1
+
+# We can assigne variable in different ways
+v = 1
+v <- 1
+1 -> v
+
 
 # You can show the type of variable
 print(class(v))
