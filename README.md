@@ -18,6 +18,14 @@ print(ls(all.name = TRUE))  # Variables that starts with dot (.) are invisible. 
 rm(a)
 ```
 
+## Packages
+```r
+.libPaths()                         # Show package installation folder
+library()                           # Show all available packages
+search()                            # Show all installed packages
+install.packages("Package Name")    # Install a package
+```
+
 ## Variables
 ```r
 # We can put dot in a variable name
@@ -105,6 +113,13 @@ m <- matrix(c("bob", 200, 1343, "carl", 201, 823), nrow=2, ncol=3, byrow=TRUE)
 #      [,1]   [,2]  [,3]  
 # [1,] "bob"  "200" "1343"
 # [2,] "carl" "201" "823"
+
+
+# Combine vectors into a matrix
+city <- c("Tampa","Seattle","Hartford","Denver")
+state <- c("FL","WA","CT","CO")
+zipcode <- c(33602,98104,06161,80294)
+addresses <- cbind(city,state,zipcode)                  # Combine everything
 ```
 
 # Factor
