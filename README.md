@@ -196,6 +196,14 @@ tail(data)                                      # Show the last couple rows
 data[c("id", "name")]                           # Select column "id" and "name" from the dataframe named "data"
 data[4:6, c("id", "name")]                      # Show row [4, 6]
 
+# Alterning dataframe
+data$new_col = NA                                   # Add a column filled with NA values
+data$new_col = 0                                    # Add a column filled with zeros
+data$country = c("Canada", "USA", "Mexico")         # Add a country columns with values
+data$name_coutry = paste(data$name, data$country)   # Add a column with name and country concatenated
+data$salary.bonus = data$salary + data$bonus        # Add a column for salary + bonus
+data = subset(data, select = -salary.bonus)         # Remove the column "salary.bonus"
+
 ```
 
 ## Arrays
@@ -311,13 +319,17 @@ tolower("BoB")                              # Lowercase
 substring("bob", 2, 3)                      # Substring for 2nd char to 3rd char. NOTE start à 1 and NOT 0.
 ```
 ## Environement
+```r
 getwd()                                     # Return the current working directory
 setwd("C:/Users/bob/R Turotial")            # Set the working directory. Note the FORWARD SLASH.
 history()                                   # List of executed command in the environement
 ls()                                        # List the variables in the environement
+```
 
 ## Read CSV
+```r
 read.csv("input.csv")                               # Read a local csv from the workspace
 counties=read.csv("http://www.a.com/data.csv")      # Read a csv from the internet
 write.csv(data, "output.csv")                       # Write a csv in the workspace. This will add row numbers.
 write.csv(data, "output.csv", row.names = FALSE)    # Save csv without row number
+```
