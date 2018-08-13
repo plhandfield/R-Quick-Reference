@@ -170,6 +170,14 @@ str(data)               # Show stucture of data frame  (column types)
 levels(data)            # Show the levels (dinstinct data (factors)) of a column
 View(data)              # Popup the viewer
 table(data$dept)        # Show frequencies for the column dept.
+mean(data$salary)       # Mean of salaries
+median(data$salary)     # Median of salary
+var(data$salary)        # Variance of salary
+sd(data$salary)         # Standard deviation
+sum(data$salary)        # Sum of salaries
+quantile(data$salary)   # Show the quantiles for salary
+
+
 
 # Querying a dataframe
 is.data.frame(df)                               # Chech if a variable is a data frame
