@@ -14,6 +14,9 @@ ls()
 print(ls(pattern="b"))      # Search with a pattern
 print(ls(all.name = TRUE))  # Variables that starts with dot (.) are invisible. Use this to show them
 
+# You can get help for a command
+help(ls)        # Help for the "ls" function
+
 # Remove variable a
 rm(a)
 ```
@@ -44,6 +47,12 @@ v <- FALSE
 v <- 4.23     # Numeric
 v <- 2L       # Integer (Add "L")
 v <- "hey"    Character
+
+# R variables are case sensitive
+a = "bob"
+A = "carl"
+print(a)        # Return bob
+print(A)        # Return carl
 
 # You can show the type of variable
 print(class(v))
@@ -154,6 +163,13 @@ df <- data.frame(
 # 1 10  bob    2000
 # 2 20 carl     456
 # 3 30  ben      20
+
+# Dataframes info
+names(data)             # Get the columns name
+str(data)               # Show stucture of data frame  (column types)
+levels(data)            # Show the levels (dinstinct data (factors)) of a column
+View(data)              # Popup the viewer
+table(data$dept)        # Show frequencies for the column dept.
 
 # Querying a dataframe
 is.data.frame(df)                               # Chech if a variable is a data frame
