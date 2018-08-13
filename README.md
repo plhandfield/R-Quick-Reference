@@ -146,8 +146,15 @@ df <- data.frame(
 # 2 20 carl     456
 # 3 30  ben      20
 
-
-
+# Querying a dataframe
+is.data.frame(df)                               # Chech if a variable is a data frame
+ncol()                                          # Number of columns
+nrow()                                          # Number of rows
+max(data$salary)                                # Max value for the column salary
+min(data$salary)                                # Min value for the column salary
+max(as.Date(data$start_date))                   # We need to cast date to use some functions
+subset(data, dept == "IT")                      # Return a dataframe with all the IT employee
+subset(data, salary > 600 & dept == "IT")       # Employee earning more than 600 and in the IT dept
 
 
 ```
@@ -269,3 +276,8 @@ getwd()                                     # Return the current working directo
 setwd("C:/Users/bob/R Turotial")            # Set the working directory. Note the FORWARD SLASH.
 history()                                   # List of executed command in the environement
 ls()                                        # List the variables in the environement
+
+## Read CSV
+read.csv("input.csv")                               # Read a csv in the workspace
+write.csv(data, "output.csv")                       # Write a csv in the workspace. This will add row numbers.
+write.csv(data, "output.csv", row.names = FALSE)    # Save csv without row number
