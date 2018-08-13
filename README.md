@@ -317,6 +317,7 @@ history()                                   # List of executed command in the en
 ls()                                        # List the variables in the environement
 
 ## Read CSV
-read.csv("input.csv")                               # Read a csv in the workspace
+read.csv("input.csv")                               # Read a local csv from the workspace
+counties=read.csv("http://www.a.com/data.csv")      # Read a csv from the internet
 write.csv(data, "output.csv")                       # Write a csv in the workspace. This will add row numbers.
 write.csv(data, "output.csv", row.names = FALSE)    # Save csv without row number
