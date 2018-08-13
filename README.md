@@ -195,8 +195,10 @@ head(data, n=10)                                # Show the first 10 rows
 tail(data)                                      # Show the last couple rows
 data[c("id", "name")]                           # Select column "id" and "name" from the dataframe named "data"
 data[4:6, c("id", "name")]                      # Show row [4, 6]
+data[order(salary, decreasing =T),]             # Sorting 
+aggregate(data$val, by=list(data$car), FUN=sum) # Agregate by car and summing the val). Note FUN is uppercase
 
-# Alterning dataframe
+# Altering dataframe
 data$new_col = NA                                   # Add a column filled with NA values
 data$new_col = 0                                    # Add a column filled with zeros
 data$country = c("Canada", "USA", "Mexico")         # Add a country columns with values
