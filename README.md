@@ -47,6 +47,11 @@ v <- "hey"    Character
 
 # You can show the type of variable
 print(class(v))
+
+# There's shorthand for boolean
+T       # True
+F       # False
+T & T   # Return true
 ```
 
 ## Vector
@@ -83,6 +88,10 @@ c1 & c2         # TRUE FALSE FALSE
 c1 = c(FALSE, 2)
 c2 = c(TRUE, 4)
 c1 && c2        # FALSE
+
+# Return element that matches
+a = c("Bob", "Carl", "Ben")
+grep("^b", a, ignore.case=T)            # Return the index of matching elements (Bob and Ben)
 
 # Other operations
 v = 1:10                                # Quick assign of a vector. Same as c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
@@ -155,7 +164,13 @@ min(data$salary)                                # Min value for the column salar
 max(as.Date(data$start_date))                   # We need to cast date to use some functions
 subset(data, dept == "IT")                      # Return a dataframe with all the IT employee
 subset(data, salary > 600 & dept == "IT")       # Employee earning more than 600 and in the IT dept
-
+data[data$salary>600,]                          # We can also query without subset(), note the trailing ",")
+data[data$salary>600, c("id", "name")]          # SELECT id, name FROM data WHERE salary > 600
+head(data)                                      # Show the first couple rows of data
+head(data, n=10)                                # Show the first 10 rows
+tail(data)                                      # Show the last couple rows
+data[c("id", "name")]                           # Select column "id" and "name" from the dataframe named "data"
+data[4:6, c("id", "name")]                      # Show row [4, 6]
 
 ```
 
