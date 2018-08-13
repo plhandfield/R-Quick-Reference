@@ -264,3 +264,8 @@ toupper("BoB")                              # Uppercase
 tolower("BoB")                              # Lowercase
 substring("bob", 2, 3)                      # Substring for 2nd char to 3rd char. NOTE start à 1 and NOT 0.
 ```
+## Environement
+getwd()                                     # Return the current working directory
+setwd("C:/Users/bob/R Turotial")            # Set the working directory. Note the FORWARD SLASH.
+history()                                   # List of executed command in the environement
+ls()                                        # List the variables in the environement
