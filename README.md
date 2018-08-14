@@ -1,5 +1,5 @@
 # R Quick Reference
-
+test
 ```r
 # This is a comment
 
@@ -140,7 +140,7 @@ zipcode <- c(33602,98104,06161,80294)
 addresses <- cbind(city,state,zipcode)                  # Combine everything
 ```
 
-# Factor
+## Factor
 ```r
 # Factors stores a vector with unique values. It is case sensitive.
 # They are most used in categorical variables.
@@ -150,7 +150,7 @@ f <- factor(c("bob", "BOB", "carl", "carl"))
 # Levels: bob BOB carl
 ```
 
-# Data Frames
+## Data Frames
 ```r
 # Data Frames is like a matrix, but each colums can have a data type.
 df <- data.frame(
