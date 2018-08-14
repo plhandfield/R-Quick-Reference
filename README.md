@@ -1,5 +1,4 @@
 # R Quick Reference
-test
 ```r
 # This is a comment
 
@@ -17,7 +16,7 @@ print(ls(all.name = TRUE))  # Variables that starts with dot (.) are invisible. 
 # You can get help for a command
 help(ls)        # Help for the "ls" function
 
-# Remove variable a
+# Remove variable a from the environement
 rm(a)
 ```
 
