@@ -108,6 +108,7 @@ seq(5, 9, by = 0.4)                     # Using a sequence
 c("bob", "carl")[1]                     # Access elements by index (starts at 1). Return "bob"
 sort(c(2, 3, 1))                        # Sorting a vector ascending
 sort(c(2, 3, 1), decreasing = TRUE)     # Sorting a vector descending
+length(v)                               # Count element in vector
 ```
 
 ## List
@@ -196,6 +197,20 @@ data[c("id", "name")]                           # Select column "id" and "name" 
 data[4:6, c("id", "name")]                      # Show row [4, 6]
 data[order(salary, decreasing =T),]             # Sorting 
 aggregate(data$val, by=list(data$car), FUN=sum) # Agregate by car and summing the val). Note FUN is uppercase
+aggregate(val ~ car, data, length)    # Group by count
+
+########################################################################
+# Multiple columns group by
+data = data.frame(name = c("bob", "bob", "carl", "bob", "carl"),
+                  dept = c("IT", "IT", "IT", "Sales", "Acc"), 
+                  weekHrs = c(25, 20, 43, 29, 62)
+)
+
+# The tilde (~) means "depends". Here the weeksHrs depend on
+# name and dept, so the aggregation can be done on name and dept.
+aggregate(weekHrs ~ name + dept, data, length)
+########################################################################
+
 
 # Altering dataframe
 data$new_col = NA                                   # Add a column filled with NA values
@@ -333,4 +348,12 @@ read.csv("input.csv")                               # Read a local csv from the 
 counties=read.csv("http://www.a.com/data.csv")      # Read a csv from the internet
 write.csv(data, "output.csv")                       # Write a csv in the workspace. This will add row numbers.
 write.csv(data, "output.csv", row.names = FALSE)    # Save csv without row number
+```
+
+## Random numbers (sample)
+```r
+sample(1:6, 5, replace=T)           # Generate 5 numbers between [1, 6], allow duplicates value
+sample(1:6, 5)                      # Same but without duplicates values
+sample(c("A", "B", "C"), 2)         # Get 2 elements from a vector
+runif(3, 4, 5.5)                    # Generate 3 real numbers between [4, 5.5]
 ```
